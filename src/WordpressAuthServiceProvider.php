@@ -2,8 +2,8 @@
 
 namespace MrShan0\WordpressAuth;
 
-use Auth;
 use Hautelook\Phpass\PasswordHash;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 use MrShan0\WordpressAuth\Auth\EloquentWordpressUserProvider;
 use MrShan0\WordpressAuth\Guard\WordpressGuard;
@@ -11,13 +11,6 @@ use MrShan0\WordpressAuth\Hashing\WordPressHasher;
 
 class WordpressAuthServiceProvider extends ServiceProvider
 {
-    /**
-     * Indicates if loading of the provider is deferred.
-     *
-     * @var bool
-     */
-    protected $defer = false;
-
     /**
      * Perform post-registration booting of services.
      *

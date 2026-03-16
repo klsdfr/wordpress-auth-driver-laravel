@@ -40,13 +40,16 @@ class WordpressUser extends Authenticatable
     protected $rememberTokenName = false;
 
     /**
-     * The attributes that should be mutated to dates.
+     * The attributes that should be cast.
      *
-     * @var array
+     * @return array<string, string>
      */
-    protected $dates = [
-        'user_registered',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'user_registered' => 'datetime',
+        ];
+    }
 
     /**
      * The attributes that should be hidden for arrays.
